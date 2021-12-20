@@ -5,7 +5,17 @@ namespace triangles
     {
         static void Main(string[] args)
         {
-            
+            Console.Write("Выберете метод решения задачи:\n");
+            Console.Write("1. По формуле герона\n");
+            Console.Write("2. По Внутренннему радиусу\n");
+            Console.Write("3. Через высоту\n");
+            Console.Write("4. По двум сторонам и углу между ними\n");
+            Console.Write("5. По стороне и двум прилежащим углам\n");
+            int cases = Convert.ToInt32(Console.ReadLine());
+            switch (cases)
+            {
+             
+            }
         }
     }
 
