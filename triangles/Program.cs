@@ -11,7 +11,7 @@ namespace triangles
 
     class triangle
     {
-        public double A, B, C, a, b, c, p, r, h, S, P;
+        public double A, B, C, a, b, c, p, r, h, S, P, R;
 
         public void perimeter()
         {
@@ -29,7 +29,22 @@ namespace triangles
         public void innerRadiusSquare()
         {
             r = Math.Sqrt((p - A)*(p - B)*(p - C) / 2);
-            S = r * (P / 2);
+            S = r * p;
+        }
+
+        public void heightSquare()
+        {
+            S = A / 2 * h;
+        }
+
+        public void twoSideAngleSquare()
+        {
+            S = A / 2 * B * Math.Sin(a);
+        }
+        
+        public void sideTwoAnglesSquare()
+        {
+            S = Math.Pow(A, 2) / 2 * (Math.Sin(a) * Math.Sin(b) / Math.Sin(180 - (a + b)));
         }
 
 
